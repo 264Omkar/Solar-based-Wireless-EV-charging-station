@@ -1,0 +1,26 @@
+int b;
+// for Motion
+void setup()
+{
+Serial.begin(9600);
+pinMode(13, INPUT);
+pinMode(4,OUTPUT); // relay (IN pin)
+//Motion Dectector Input (IR Do pin)
+pinMode(7,OUTPUT);
+// Motion Dectector Output
+void loop()
+//***** motion dectector******
+b-digitalRead(13);
+Serial.println(b);
+if (b==HIGH)
+{
+digitalWrite(4,HIGH);
+digitalwrite(7,255);
+delay(1000);
+}
+}
+else
+{
+}
+digitalWrite(4, LOW);
+digitalWrite(7, LOW);
